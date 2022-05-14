@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Jasper Teste</title>
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/5.12.0/css/all.min-jsf.css" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/5.12.0/css/v4-shims.min-jsf.css" />
+	<script src="https://kit.fontawesome.com/34e113f280.js"
+		crossorigin="anonymous"></script>
+
+	<style>
+body {
+	text-align:center;
+}
+
+.textbox {
+	margin-left: 20px;
+	width: 500px;
+	horizontal-align: center;
+}
+
+.form {
+	horizontal-align: right;
+}
+
+.formulario {
+	margin-top: 40px;
+	width: 700px;
+	
+}
+
+.botao1.ui-button {
+	font-family: 'Red Hat Mono', monospace;
+	font-size: 20px;
+	color: #DA4453;
+	font-weight: 500px;
+	background-color: #262626;
+	border: 50px;
+	border-radius: 10px;
+	margin-right: 5px;
+	margin-top: 30px;
+}
+
+.card1 {
+	width: 700px;
+}
+
+.icon-spotify {
+	background: url("http://www.w3.org/2000/svg") no-repeat !important;
+	height: 50px;
+	width: 50px;
+}
+
+.submenus {
+	font-family: 'Red Hat Mono', monospace;
+
+}
+</style>
+
+</h:head>
+<h:body>
+
+	<center>
+
+		<div class="card1">
+			<h:form>
+				<p:megaMenu orientation="horizontal" autoDisplay="false" >
+					<p:menuitem label="Home" icon="fa-solid fa-house"
+						style="font-family: 'Red Hat Mono', monospace ; margin-right:20px; padding: "/>
+				
+					<p:submenu label="Videos" icon="fa-brands fa-youtube"
+						style="font-family: 'Red Hat Mono', monospace ; margin-left:180px;">
+						<p:column>
+							<p:submenu label="Cachorros" styleClass="submenus">
+								<p:menuitem value="Vagabundo" styleClass="submenus"
+									url="https://www.youtube.com/watch?v=rue_VAEkpR0" />
+								<p:menuitem value="Mijão" styleClass="submenus"
+									url="https://www.youtube.com/watch?v=rue_VAEkpR0" />
+							</p:submenu>
+
+							<p:submenu label="Gatos" styleClass="submenus">
+								<p:menuitem value="Enciumado" styleClass="submenus"
+									url="https://www.youtube.com/watch?v=xL9UgAiX8ks" />
+								<p:menuitem value="Dengoso" styleClass="submenus"
+									url="https://youtu.be/mrj5rm5EC0c" />
+							</p:submenu>
+
+						</p:column>
+
+					</p:submenu>
+
+					<p:submenu label="Musicas" icon="fa-brands fa-spotify"
+						style="font-family: 'Red Hat Mono', monospace;">
+
+						<p:column>
+							<p:submenu label="Artistas recomendados">
+								<p:menuitem value="Rita Lee" styleClass="submenus" url="musica/ritalee.xhtml" />
+								<p:menuitem value="Nara Leão" styleClass="submenus" />
+							</p:submenu>
+							<p:submenu label="User 2">
+								<p:menuitem value="User 2.1" styleClass="submenus" />
+								<p:menuitem value="User 2.2" styleClass="submenus" />
+							</p:submenu>
+						</p:column>
+
+					</p:submenu>
+
+
+					<p:submenu label="Settings" icon="pi pi-fw pi-cog"
+						style="font-family: 'Red Hat Mono', monospace;">
+						<p:column>
+							<p:submenu label="Setting 1">
+								<p:menuitem value="Setting 1.1" styleClass="submenus" />
+								<p:menuitem value="Setting 1.2" styleClass="submenus" />
+							</p:submenu>
+							<p:submenu label="Setting 2">
+								<p:menuitem value="Setting 2.1" styleClass="submenus" />
+								<p:menuitem value="Setting 2.2" styleClass="submenus" />
+							</p:submenu>
+
+						</p:column>
+					</p:submenu>
+				</p:megaMenu>
+			</h:form>
+		</div>
+		
+		
+		<h:form styleClass="formulario">
+			<p:panelGrid columns="2">
+				<p:outputLabel value="Titulo" styleClass="form" />
+				<p:inputText value="#{musicaBean.musica.titulo}" placeholder="Titulo" styleClass="textbox" />
+
+				<p:outputLabel value="Album" styleClass="form" />
+				<p:inputText value="#{musicaBean.musica.album}" placeholder="Album" styleClass="textbox" />
+
+				<p:outputLabel value="Duração em Minutos" styleClass="form" />
+				<p:inputText value="#{musicaBean.musica.duracaoMin}" placeholder="Duração" styleClass="textbox" />
+			</p:panelGrid>
+			
+			<p:commandButton value="Cadastrar" styleClass="botao1"
+				actionListener="#{musicaBean.cadastrar}" />
+
+			<p:commandButton value="Gerar Relatório" styleClass="botao1"
+				action="musica/ritalee.xhtml" ajax="false" />
+		</h:form>
+
+	</center>
+</h:body>
+
+</html>

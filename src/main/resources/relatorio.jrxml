@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8b46e5d5-71e3-46cc-af72-9864156307c5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="titulo" class="java.lang.String"/>
+	<field name="album" class="java.lang.String"/>
+	<field name="duracaoMin" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="68" splitType="Stretch">
+			<rectangle>
+				<reportElement x="80" y="9" width="400" height="50" forecolor="#000000" backcolor="#3BA0FF" uuid="4052d70e-e888-4649-a623-1793a1fd3e3c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="190" y="9" width="180" height="50" uuid="bc178100-258a-4c61-8a84-516033b0e1e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Malgun Gothic" size="18" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Relatório de Musicas]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="27" width="23" height="14" uuid="1f5117c2-1c1e-4096-93d0-5ce2d7875009"/>
+				<textElement>
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement x="80" y="0" width="100" height="21" backcolor="#595959" uuid="3186f22d-3404-4234-a10e-c3a70b1d6b60"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="380" y="0" width="100" height="21" backcolor="#757575" uuid="13a2c410-191f-4e22-bffe-57d2de1eb0e9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="180" y="0" width="100" height="21" backcolor="#757575" uuid="1d5ca354-3c50-445e-a12b-01ef3e869599"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="280" y="0" width="100" height="21" backcolor="#595959" uuid="96b62290-f2f9-4252-8c04-38fe6ef67c6c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="80" y="0" width="100" height="21" uuid="f71cacd2-45e0-44c2-8a9d-eeb92ae689af"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="14"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="21" uuid="7015f75d-b786-4b68-96ce-552b3d71a5de"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="14"/>
+				</textElement>
+				<text><![CDATA[TITULO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="21" uuid="f1cb4c62-1b7f-45b5-95cf-f592a02f37b8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="14"/>
+				</textElement>
+				<text><![CDATA[ALBUM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="21" uuid="6d42f06a-fd19-47c3-873b-94dbd359b4dc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="14"/>
+				</textElement>
+				<text><![CDATA[DURAÇÃO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="80" y="0" width="100" height="20" uuid="a234c9c6-e740-4f3d-a2e7-875af2d2a486"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="180" y="0" width="100" height="20" uuid="8f3572b4-4230-4596-8d47-9e3064538799"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="280" y="0" width="100" height="20" uuid="4d07e15d-a2e1-43ea-9b78-ac339a6bc3cf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="380" y="0" width="100" height="20" uuid="83329bb8-d2dd-4154-a29c-1a0c903ccb25"/>
+			</rectangle>
+			<textField>
+				<reportElement x="80" y="0" width="100" height="20" uuid="7b5ebd45-a374-4d6e-b675-3ec2bd371aed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="100" height="20" uuid="8846c73d-f711-4b95-854d-1c5eeb2fe4d4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titulo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="20" uuid="799a2acb-3251-4af8-be97-b18651f901bd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{album}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="20" uuid="1f0820fb-261b-49f2-9cfe-7bf3b1195e46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{duracaoMin}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="160" y="2" width="10" height="16" uuid="5d96e737-f00e-435b-b6b1-c63e1a8e6f75"/>
+				<imageExpression><![CDATA["https://media.discordapp.net/attachments/870792099279294495/974748046304903168/325c9507-1686-48b9-8123-529842167971.jpg?width=360&height=547"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
